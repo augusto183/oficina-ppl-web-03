@@ -10,13 +10,17 @@
         /*
         Estrutura sequencial
         Comandos de saída
+        Comando de entrada
+        Variável
+        Template string
         */
         var nome = "Ana";
 
+        nome = prompt("Informe o seu nome:");
 
-        alert("Olá, " + nome + " na janela aberta!");
-        document.write("Olá, " + nome + " no documento!");
-        console.log("Olá, " + nome + " no console!");
+        alert(`Olá, ${nome} na janela aberta!`);
+        document.write(`Olá, ${nome} no documento!`);
+        console.log(`Olá, ${nome} no console!`);
     </script>
 </body>
 </html>
