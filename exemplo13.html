@@ -31,8 +31,16 @@
             margin: 1rem;
         }
 
+        .pode-votar {
+            background-color: green;
+        }
+
+        .nao-pode-votar {
+            background: red;
+        }
+
         .par {
-            background-color: blue;
+            background-color: red;
         }
 
         .impar {
@@ -52,14 +60,18 @@
             Variável
             Template string
             */
-            var num;
+            var idade
 
-            num = parseInt(prompt("Informe um número:"));
+            idade = parseInt(prompt("Informe um número:"));
             
-            if(num % 2 == 0)
-                document.write(`<div class="bloco par">O número ${num} é par!</div>`);
-            else
-                document.write(`<div class="bloco impar">O número ${num} é impar!</div>`);
+            if(idade < 16){
+                document.write(`<div class="bloco">A pessoa é menor de idade!</div>`);
+                document.write(`<div class="bloco nao-pode-votar">A pessoa não pode votar!</div>`);
+            }
+            else {
+                document.write(`<div class="bloco">A pessoa é maior de idade!</div>`);
+                document.write(`<div class="bloco pode-votar">A pessoa pode votar!</div>`);
+            }
         </script>
     </div> <!-- Fechamento do container. -->
 </body>
